@@ -17,7 +17,6 @@ const $episodesList = $("#episodesList");
 
 async function getShowsByTerm(term) {
   let res = await axios.get("https://api.tvmaze.com/search/shows", {params: {q: term}});
-  const test = await axios.get('http://api.tvmaze.com/shows/1767/episodes')
 
   return res.data.map(val => {
     const valShow = val.show;
